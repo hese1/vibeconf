@@ -21,7 +21,7 @@ Backs up existing configs before overwriting.
 claude --agent implementer
 
 # OpenCode
-opencode  # Tab to switch to implementer
+opencode --agent implementer  # Tab to switch to implementer
 ```
 
 ## Architecture
@@ -101,6 +101,7 @@ Reviewer is configured for Python (ruff + pytest). To adapt:
 | Rust     | cargo clippy, cargo fmt | cargo test     |
 
 Update allowed commands in:
+
 - `claude-code/settings.json` allow list + `reviewer.md` hook + prompt
 - `opencode/agents/reviewer.md` permission.bash + prompt
 
