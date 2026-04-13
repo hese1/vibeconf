@@ -48,6 +48,7 @@ Report issues as:
 ### Python
 
 You can ONLY run these commands:
+
 - `uv run ruff check` / `uv run ruff check --fix` (with optional paths)
 - `uv run ruff format` / `uv run ruff format --check` (with optional paths)
 - `uv run pytest` (with optional flags and paths)

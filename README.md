@@ -80,31 +80,6 @@ opencode --agent implementer  # Tab to switch to implementer
         └── reviewer.md         → ~/.config/opencode/agents/reviewer.md
 ```
 
-## Caveman skill
-
-Stripped-down output style. No articles, no filler, no pleasantries. Technical terms and code stay exact. Cuts ~65% output tokens.
-
-Preloaded into Claude Code agents via `skills: [caveman]` frontmatter. OpenCode agents load it via prompt instruction (OpenCode doesn't have a skills preload field in agent config).
-
-Both tools discover it from `~/.claude/skills/caveman/SKILL.md`.
-
-Turn off mid-session: "stop caveman" or "normal mode".
-
-## Adapting for other languages
-
-Reviewer is configured for Python (ruff + pytest). To adapt:
-
-| Language | Replace ruff with | Replace pytest with |
-|----------|-------------------|---------------------|
-| JS/TS    | eslint, prettier  | vitest, jest        |
-| Go       | golangci-lint, gofmt | go test          |
-| Rust     | cargo clippy, cargo fmt | cargo test     |
-
-Update allowed commands in:
-
-- `claude-code/settings.json` allow list + `reviewer.md` hook + prompt
-- `opencode/agents/reviewer.md` permission.bash + prompt
-
 ## License
 
 MIT
